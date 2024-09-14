@@ -1,4 +1,4 @@
-package az.atl.customerms.model.enums;
+package az.atl.orderms.model.enums;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

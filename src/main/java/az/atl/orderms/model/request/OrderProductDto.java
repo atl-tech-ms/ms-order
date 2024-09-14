@@ -11,8 +11,8 @@ import static lombok.AccessLevel.PRIVATE;
 @NoArgsConstructor
 @AllArgsConstructor
 @FieldDefaults(level = PRIVATE)
-public class OrderRequestDto {
-    Long userId;
+public class OrderProductDto {
+    Long customerId;
     Long productId;
-    Long quantity;
+    Integer count;
 }

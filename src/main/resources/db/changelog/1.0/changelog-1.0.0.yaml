@@ -1,6 +1,37 @@
 databaseChangeLog:
   - changeSet:
-      id: 0
-      author: admin
+      id: Create order table
+      author: ELnur Hasanov
       changes:
-        -
+        - createTable:
+            tableName: orders
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+              - column:
+                  name: price
+                  type: decimal
+                  constraints:
+                    nullable: false
+              - column:
+                  name: count
+                  type: integer
+                  constraints:
+                    nullable: false
+              - column:
+                  name: customer_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+              - column:
+                  name: product_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+
+            remarks: Table to store information about orders
