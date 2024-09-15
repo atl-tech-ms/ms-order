@@ -3,6 +3,7 @@ package az.atl.orderms.controller;
 import az.atl.orderms.model.request.OrderProductDto;
 import az.atl.orderms.model.response.OrderResponseDto;
 import az.atl.orderms.service.OrderService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -21,7 +22,7 @@ public class OrderController {
     }
 
     @PostMapping
-    public ResponseEntity<Void> oderProduct(@RequestBody OrderProductDto dto) {
+    public ResponseEntity<Void> oderProduct(@Valid @RequestBody OrderProductDto dto) {
         orderService.oderProduct(dto);
         return ResponseEntity.status(OK).build();
     }

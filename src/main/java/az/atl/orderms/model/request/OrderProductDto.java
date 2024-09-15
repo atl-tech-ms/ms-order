@@ -1,5 +1,6 @@
 package az.atl.orderms.model.request;
 
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,7 +13,12 @@ import static lombok.AccessLevel.PRIVATE;
 @AllArgsConstructor
 @FieldDefaults(level = PRIVATE)
 public class OrderProductDto {
+    @NotNull
     Long customerId;
+
+    @NotNull
     Long productId;
+
+    @NotNull
     Integer count;
 }
