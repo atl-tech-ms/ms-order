@@ -19,7 +19,7 @@ import static org.springframework.http.HttpStatus.NOT_FOUND;
 
 @Slf4j
 @RestControllerAdvice
-public class GlobalErrorHandler {
+public class GlobalExceptionHandler {
     @ExceptionHandler(CustomFeignException.class)
     public ResponseEntity<ErrorResponse> handle(HttpServletRequest request,
                                                 CustomFeignException exception) {
